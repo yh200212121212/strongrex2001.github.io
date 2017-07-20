@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>AKI-ZAKURA</title>
+  <title>在实例中学习——从零开始学JAVA #2 基本语法 | AKI-ZAKURA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="AKI-ZAKURA">
-<meta property="og:url" content="http://strongrex2001.github.io/index.html">
+  <meta name="description" content="这一课将会分几个部分来阐述。只讲一些基本概念，方便之后阐述问题。   1、类(class)上一课中，我们讲了一个A+B Problem的例子，其中创建了一个类，Main。类是Java开发的一个基本元素，可以用来储存自定义数据结构、在其中编辑代码逻辑等。   2、修饰符(modifier)继续看上一课中的例子。1234567891011121314151617import java.util.Sca">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在实例中学习——从零开始学JAVA #2 基本语法">
+<meta property="og:url" content="http://strongrex2001.github.io/2017/07/21/java_t0_02/index.html">
 <meta property="og:site_name" content="AKI-ZAKURA">
+<meta property="og:description" content="这一课将会分几个部分来阐述。只讲一些基本概念，方便之后阐述问题。   1、类(class)上一课中，我们讲了一个A+B Problem的例子，其中创建了一个类，Main。类是Java开发的一个基本元素，可以用来储存自定义数据结构、在其中编辑代码逻辑等。   2、修饰符(modifier)继续看上一课中的例子。1234567891011121314151617import java.util.Sca">
+<meta property="og:updated_time" content="2017-07-20T23:49:28.393Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AKI-ZAKURA">
+<meta name="twitter:title" content="在实例中学习——从零开始学JAVA #2 基本语法">
+<meta name="twitter:description" content="这一课将会分几个部分来阐述。只讲一些基本概念，方便之后阐述问题。   1、类(class)上一课中，我们讲了一个A+B Problem的例子，其中创建了一个类，Main。类是Java开发的一个基本元素，可以用来储存自定义数据结构、在其中编辑代码逻辑等。   2、修饰符(modifier)继续看上一课中的例子。1234567891011121314151617import java.util.Sca">
   
     <link rel="alternate" href="/atom.xml" title="AKI-ZAKURA" type="application/atom+xml">
   
@@ -59,9 +63,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-java_t0_02" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-java_t0_02" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/07/21/java_t0_02/" class="article-date">
   <time datetime="2017-07-20T23:26:18.000Z" itemprop="datePublished">2017-07-21</time>
@@ -74,8 +76,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/21/java_t0_02/">在实例中学习——从零开始学JAVA #2 基本语法</a>
+    <h1 class="article-title" itemprop="name">
+      在实例中学习——从零开始学JAVA #2 基本语法
     </h1>
   
 
@@ -100,58 +102,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-java_t0_01" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/07/20/java_t0_01/" class="article-date">
-  <time datetime="2017-07-20T13:45:07.000Z" itemprop="datePublished">2017-07-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/20/java_t0_01/">在实例中学习——从零开始学Java #1 输入输出</a>
-    </h1>
+    <a href="/2017/07/20/java_t0_01/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">在实例中学习——从零开始学Java #1 输入输出</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>首先，你需要下载并安装开发环境。  </p>
-<ol>
-<li>JDK，去官网上下即可，<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>  </li>
-<li>这里用的是Eclipse，各种地方的都可以。不建议从官网Installer下，因为慢。  </li>
-</ol>
-<p>打开Eclipse，会出现一个欢迎界面，如下图。不用管它，Window-New Window即可。<br><img src="/2017/07/20/java_t0_01/i0.png" alt="欢迎界面" title="欢迎界面">  </p>
-<p>在左侧的Project Explorer中空白位置右键-&gt;New-&gt;Java Project，输入新工程的名字，单击Finish<br><img src="/2017/07/20/java_t0_01/i1.png" alt="新建工程" title="新建工程">  </p>
-<p>按工程名前面的+号，展开新的工程，右键src-&gt;New-&gt;Class，名字取为Main，并勾选public static void main选项（这是程序入口，其他类不需勾选），单击Finish<br><img src="/2017/07/20/java_t0_01/i2.png" alt="新建Main类" title="新建Main类">  </p>
-<p>（第一次讲详细些，之后就略去细节了！）  </p>
-<p>关键函数：System.out.println System.out.print<br>关键类：Scanner  </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Scanner;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">	<span class="comment">/*</span></div><div class="line">	 * Example #1.1 A+B Problem</div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		System.out.print(<span class="string">"Enter A: "</span>); <span class="comment">//输出    请输入A 的提示</span></div><div class="line">		Scanner scanner = <span class="keyword">new</span> Scanner(System.in); <span class="comment">//创建Scanner对象</span></div><div class="line">		<span class="keyword">int</span> a = scanner.nextInt(); <span class="comment">//读取用户输入的整数赋值到a</span></div><div class="line">		System.out.print(<span class="string">"Enter B: "</span>);</div><div class="line">		<span class="keyword">int</span> b = scanner.nextInt();</div><div class="line">		System.out.println(a + b); <span class="comment">//输出 a + b的值</span></div><div class="line">		scanner.close();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>PS：一个很好用的功能，自动补全，可以在设置中开启。菜单栏Window-&gt;Preferences-&gt;Java-&gt;Content Assist，下面有个Auto activation triggers for Java，把a~z，A~Z还有数字0~9都加进去。<br><img src="/2017/07/20/java_t0_01/i3.png" alt="自动补全设置" title="自动补全设置">  </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://strongrex2001.github.io/2017/07/20/java_t0_01/" data-id="cj5d39md00001b8iywben0v5x" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
