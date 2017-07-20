@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>AKI-ZAKURA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="AKI-ZAKURA">
+<meta property="og:url" content="http://strongrex2001.github.io/index.html">
+<meta property="og:site_name" content="AKI-ZAKURA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AKI-ZAKURA">
+  
+    <link rel="alternate" href="/atom.xml" title="AKI-ZAKURA" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">AKI-ZAKURA</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://strongrex2001.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-java_t0_01" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/20/java_t0_01/" class="article-date">
+  <time datetime="2017-07-20T13:45:07.000Z" itemprop="datePublished">2017-07-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/20/java_t0_01/">在实例中学习——从零开始学Java #1 输入输出</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>首先，你需要下载并安装开发环境。  </p>
+<ol>
+<li>JDK，去官网上下即可，<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>  </li>
+<li>这里用的是Eclipse，各种地方的都可以。不建议从官网Installer下，因为慢。  </li>
+</ol>
+<p>打开Eclipse，会出现一个欢迎界面，如下图。不用管它，Window-New Window即可。<br><img src="/2017/07/20/java_t0_01/i0.png" alt="欢迎界面" title="欢迎界面">  </p>
+<p>在左侧的Project Explorer中空白位置右键-&gt;New-&gt;Java Project，输入新工程的名字，单击Finish<br><img src="/2017/07/20/java_t0_01/i1.png" alt="新建工程" title="新建工程">  </p>
+<p>按工程名前面的+号，展开新的工程，右键src-&gt;New-&gt;Class，名字取为Main，并勾选public static void main选项（这是程序入口，其他类不需勾选），单击Finish<br><img src="/2017/07/20/java_t0_01/i2.png" alt="新建Main类" title="新建Main类">  </p>
+<p>（第一次讲详细些，之后就略去细节了！）  </p>
+<p>关键函数：System.out.println System.out.print<br>关键类：Scanner  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Scanner;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">	<span class="comment">/*</span></div><div class="line">	 * Example #1.1 A+B Problem</div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		System.out.print(<span class="string">"Enter A: "</span>); <span class="comment">//输出    请输入A 的提示</span></div><div class="line">		Scanner scanner = <span class="keyword">new</span> Scanner(System.in); <span class="comment">//创建Scanner对象</span></div><div class="line">		<span class="keyword">int</span> a = scanner.nextInt(); <span class="comment">//读取用户输入的整数赋值到a</span></div><div class="line">		System.out.print(<span class="string">"Enter B: "</span>);</div><div class="line">		<span class="keyword">int</span> b = scanner.nextInt();</div><div class="line">		System.out.println(a + b); <span class="comment">//输出 a + b的值</span></div><div class="line">		scanner.close();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>PS：一个很好用的功能，自动补全，可以在设置中开启。菜单栏Window-&gt;Preferences-&gt;Java-&gt;Content Assist，下面有个Auto activation triggers for Java，把a~z，A~Z还有数字0~9都加进去。<br><img src="/2017/07/20/java_t0_01/i3.png" alt="自动补全设置" title="自动补全设置">  </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://strongrex2001.github.io/2017/07/20/java_t0_01/" data-id="cj5ci5gz60000g8iycsasxbtq" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/07/20/java_t0_01/">在实例中学习——从零开始学Java #1 输入输出</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 北海若<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
