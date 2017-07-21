@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://strongrex2001.github.io"></form>
@@ -60,6 +60,49 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-java_t0_04" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/21/java_t0_04/" class="article-date">
+  <time datetime="2017-07-21T07:12:28.000Z" itemprop="datePublished">2017-07-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/21/java_t0_04/">在实例中学习——从零开始学JAVA #4 循环和穷举</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="while-循环"><a href="#while-循环" class="headerlink" title="while 循环"></a>while 循环</h3><p>会一点英语的人都知道while是什么意思——‘当’。<br>没错这种循环就叫当循环。<br>基本结构：while(条件) {<br>    //进行处理<br>    //处理过程将会不断重复，只要条件成立。<br>}<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">	<span class="comment">/*</span></div><div class="line">	 * Example #4.1 输出1~10的正整数 while版本</div><div class="line">	 * 你可以自己用逻辑推演一下</div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> i = <span class="number">1</span>; <span class="comment">//i初始为1</span></div><div class="line">		<span class="keyword">while</span> (i &lt;= <span class="number">10</span>) <span class="comment">//i&lt;=10时重复以下过程，这样最后一次进行输出操作时i的值为10，可以达到输出1~10的正整数的目的</span></div><div class="line">		&#123;</div><div class="line">			System.out.println(i); <span class="comment">//输出i的当前值</span></div><div class="line">			i++; <span class="comment">//此处等效于 i += 1和 i = i + 1，写起来方便所以用i++</span></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="do-…-while循环"><a href="#do-…-while循环" class="headerlink" title="do … while循环"></a>do … while循环</h3><p>基本结构：do {<br>    //进行处理<br>    //处理过程将会不断重复，只要条件成立。<br>} while(条件); <strong>注意这里有个分号！</strong></p>
+<p>do … while循环和while循环的不同之处在于，无论条件是否成立，do … while循环中的语句都会被至少执行一次。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">	<span class="comment">/*</span></div><div class="line">	 * Example #4.2 输出1~10的正整数 do ... while版本</div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> i = <span class="number">1</span>; <span class="comment">//i初始为1</span></div><div class="line">		<span class="keyword">do</span> &#123;</div><div class="line">			System.out.println(i); <span class="comment">//输出i的当前值</span></div><div class="line">			i++; <span class="comment">//此处等效于 i += 1和 i = i + 1，写起来方便所以用i++</span></div><div class="line">		&#125; <span class="keyword">while</span> (i &lt;= <span class="number">10</span>); <span class="comment">//i&lt;=10时重复以上过程，这样最后一次进行输出操作，i的值为10</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这里需要处理的过程比较简单，所以条件和while循环是一样的；但是在这里条件是执行完代码块再判断的，在之后的开发中需要推演一下防止条件出错。  </p>
+<h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><p>基本结构：for (初始化;条件;每步对变量的操作) {<br>    //处理过程<br>}<br>for循环的”初始化”部分可以定义新的局部变量，这个变量只会在for循环内生效。<br>for循环可以把一些和处理主过程无关、而是循环所带来的语句放在一起，因此也比较常用。缺点是，如果条件比较复杂，写在一起会引起阅读上的一定困难，这时候常常使用while循环<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">	<span class="comment">/*</span></div><div class="line">	 * Example #4.3 输出1~10的正整数 for版本</div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; i++)</div><div class="line">		&#123;</div><div class="line">			System.out.println(i);</div><div class="line">		&#125; <span class="comment">//很简洁吧</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="接下来讲讲穷举"><a href="#接下来讲讲穷举" class="headerlink" title="接下来讲讲穷举"></a>接下来讲讲穷举</h2><p>穷举的基本结构是循环套分支，利用计算机算的比较快这一特点，循环所有可能情况，判断是否满足条件并进行相应处理。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">	<span class="comment">/*</span></div><div class="line">	 * Example #4.4 输出1~1000中能被3整除的但不能被5整除的数的个数</div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> count = <span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">1000</span>; i++) <span class="comment">//循环1~1000所有正整数</span></div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span> (i % <span class="number">3</span> == <span class="number">0</span> &amp;&amp; i % <span class="number">5</span> != <span class="number">0</span>) <span class="comment">//取余运算。i模3余数为0即i能被3整除</span></div><div class="line">				count++; <span class="comment">//满足条件，将个数+1</span></div><div class="line">		&#125;</div><div class="line">		System.out.println(count);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>第二课练习答案：<br>所有的标识符：Main main args System out println<br>所有的修饰符：public(两个) static  </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://strongrex2001.github.io/2017/07/21/java_t0_04/" data-id="cj5dkli3q0003t0iy8dpycn62" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-java_t0_03" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -117,7 +160,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://strongrex2001.github.io/2017/07/21/java_t0_03/" data-id="cj5dipo460002vwiyq2mstox8" class="article-share-link">Share</a>
+      <a data-url="http://strongrex2001.github.io/2017/07/21/java_t0_03/" data-id="cj5dkli3j0002t0iy3ost7k5n" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -160,7 +203,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://strongrex2001.github.io/2017/07/21/java_t0_02/" data-id="cj5dipo440001vwiya338xnl2" class="article-share-link">Share</a>
+      <a data-url="http://strongrex2001.github.io/2017/07/21/java_t0_02/" data-id="cj5dkli3i0001t0iy8t2ozg3x" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -208,7 +251,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://strongrex2001.github.io/2017/07/20/java_t0_01/" data-id="cj5dipo3z0000vwiyz570niii" class="article-share-link">Share</a>
+      <a data-url="http://strongrex2001.github.io/2017/07/20/java_t0_01/" data-id="cj5dkli3c0000t0iyj9takpar" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -233,7 +276,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li></ul>
     </div>
@@ -243,9 +286,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/07/21/java_t0_04/">在实例中学习——从零开始学JAVA #4 循环和穷举</a>
+          </li>
         
           <li>
             <a href="/2017/07/21/java_t0_03/">在实例中学习——从零开始学JAVA #3 基本数据类型和分支结构</a>
