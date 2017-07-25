@@ -49,9 +49,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS-каналы"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Поиск"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://strongrex2001.github.io"></form>
@@ -186,10 +186,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-java_t0_02" class="article article-type-post" itemscope itemprop="blogPost" style="font-family: 微软雅黑">
+    <article id="post-java_t0_03" class="article article-type-post" itemscope itemprop="blogPost" style="font-family: 微软雅黑">
   <div class="article-meta">
-    <a href="/2017/07/21/java_t0_02/" class="article-date">
-  <time datetime="2017-07-20T23:26:18.000Z" itemprop="datePublished">2017-07-21</time>
+    <a href="/2017/07/21/java_t0_03/" class="article-date">
+  <time datetime="2017-07-21T05:41:12.000Z" itemprop="datePublished">2017-07-21</time>
 </a>
     
   </div>
@@ -200,7 +200,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/21/java_t0_02/">在实例中学习——从零开始学JAVA #2 基本语法</a>
+      <a class="article-title" href="/2017/07/21/java_t0_03/">在实例中学习——从零开始学JAVA #3 基本数据类型和分支结构</a>
     </h1>
   
 
@@ -208,18 +208,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这一课将会分几个部分来阐述。只讲一些基本概念，方便之后阐述问题。  </p>
-<h3 id="1、类-class"><a href="#1、类-class" class="headerlink" title="1、类(class)"></a>1、类(class)</h3><p>上一课中，我们讲了一个A+B Problem的例子，其中创建了一个类，Main。<br>类是Java开发的一个基本元素，可以用来储存自定义数据结构、在其中编辑代码逻辑等。  </p>
-<h3 id="2、修饰符-modifier"><a href="#2、修饰符-modifier" class="headerlink" title="2、修饰符(modifier)"></a>2、修饰符(modifier)</h3><p>继续看上一课中的例子。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Scanner;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">	<span class="comment">/*</span></div><div class="line">	 * Example #1.1 A+B Problem</div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		System.out.print(<span class="string">"Enter A: "</span>); <span class="comment">//输出    请输入A 的提示</span></div><div class="line">		Scanner scanner = <span class="keyword">new</span> Scanner(System.in); <span class="comment">//创建Scanner对象</span></div><div class="line">		<span class="keyword">int</span> a = scanner.nextInt(); <span class="comment">//读取用户输入的整数赋值到a</span></div><div class="line">		System.out.print(<span class="string">"Enter B: "</span>);</div><div class="line">		<span class="keyword">int</span> b = scanner.nextInt();</div><div class="line">		System.out.println(a + b); <span class="comment">//输出 a + b的值</span></div><div class="line">		scanner.close();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>其中修饰main函数和Main class的public、static就是修饰符。除此之外修饰符还有private protected final abstract等   </p>
-<h3 id="3、标识符-token"><a href="#3、标识符-token" class="headerlink" title="3、标识符(token)"></a>3、标识符(token)</h3><p>Java所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。例子中我们定义的标识符有：<br>Main(类名) main(方法名) args(变量-函数参数) scanner a b(变量-局部变量)<br>注意：只有类名与文件名完全相同时，这个类才能修饰为public。<br>Java是大小写敏感的，这意味着标识符a和A是不同的。  </p>
-<h3 id="4、注释"><a href="#4、注释" class="headerlink" title="4、注释"></a>4、注释</h3><p>注释是为了让别人（或者自己）能读懂代码而附加的，或是用来附带一些其他信息如作者等，在编译时会被忽略。<br>//开头的是单行注释，如上例中”输出 a + b的值”<br>用/<em> </em>/包含的是多行注释【当然也可以在一行中使用】</p>
-<p>小练习：找出例子中所有的标识符和修饰符<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">	<span class="comment">/*</span></div><div class="line">	 * Example #2.1 Hello World</div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"Hello, World!"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+        <p>Java中的基本数据类型包括：boolean char byte short int long float double<br>这些基本类型都是值类型。何为值类型？就是你将它作为函数参数，函数不能改变它的值。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">	<span class="comment">/*</span></div><div class="line">	 * Example #3.1 值类型</div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		<span class="keyword">float</span> f = <span class="number">14.56f</span>; <span class="comment">//一定要有f哦</span></div><div class="line">		Test(f);</div><div class="line">		System.out.println(f); <span class="comment">//输出仍然是14.56而不是1.23</span></div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Test</span><span class="params">(<span class="keyword">float</span> X)</span></span></div><div class="line">	&#123;</div><div class="line">		X = <span class="number">1.23f</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li><p>boolean只能为true或者false，可以直接用于判断条件中  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</div><div class="line"><span class="keyword">if</span> (flag) <span class="comment">//不必写flag == true</span></div><div class="line">  <span class="comment">//Do Something</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>char 代表一个字符，可以用如’a’来表示一个char类型的常量。Java采用Unicode编码，因此char占用两个字节，也允许直接使用中文而不必如C++那样进行额外的操作。</p>
+<ul>
+<li>常见的特殊字符：’\r’’\n’代表换行/回车。值得注意的是，Windows中的换行需要一个’\r’+一个’\n’，而Linux中(包括Android)只需要’\n’</li>
+</ul>
+</li>
+<li>byte short int long 代表整数，可正可负。具体范围不用记，只需要知道大概；一般情况下都用int就行了。<ul>
+<li>byte从-128到127，占用1字节空间</li>
+<li>short从-32768到32767，占用2字节空间</li>
+<li>int从-2147483648,到2147483647共10位，占用4字节空间</li>
+<li>long从-9223372036854775808到9223372036854775807共19位，占用8字节空间</li>
+</ul>
+</li>
+<li>float double代表浮点数，用来储存和计算小数，或是精确度要求不高情况下大数的运算<ul>
+<li>float 范围大约是10^38，占用4字节空间，精确度大概能到6位小数</li>
+<li>double 范围大约是10^308，占用8字节空间，精确度大概能到12位小数</li>
+<li>float的精度、范围都比double要小，但是因为6位小数的精度和10^38的范围在游戏中一般是够用的，而储存空间又占用较小，因此游戏引擎中多数使用的是float类型。</li>
+<li>Java默认如1.23是一个double类型，如果你写float a = 1.23;会编译报错。你必须加一个f或者F作为后缀，表示这是个float类型的小数常量。</li>
+<li>小数常量有多种类型。1.23是通常的表示方法，当整数部分为0是也可以直接.23省略0；可以用科学计数法表示，比如1E10=10^10。</li>
+</ul>
+</li>
+</ul>
+<p>分支结构是一个程序中不可缺少的部分，结构本身有一个入口，在途中分为两条或多条”岔路”，随条件不同而进入不同的”岔路”。随后在某处岔路会合并【哪怕是在结束时】，所以分支结构只有一个出口。<br>怎么感觉讲得太概念了，直接上例子吧。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Scanner;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">	<span class="comment">/*</span></div><div class="line">	 * Example #3.2 分段函数求值</div><div class="line">	 * 本例中对于输入一个x，输出f(x)的值</div><div class="line">	 * </div><div class="line">	 * f(x) = 1 (x &lt; 0); 2x (0 &lt;= x &lt; 10); x^2 (x &gt;= 10)</div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">		<span class="keyword">float</span> input = scanner.nextFloat(); <span class="comment">//读取用户输入的x值</span></div><div class="line">		System.out.println(F(input)); <span class="comment">//计算函数值并输出</span></div><div class="line">		scanner.close();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">float</span> <span class="title">F</span><span class="params">(<span class="keyword">float</span> x)</span></span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">float</span> y;</div><div class="line">		<span class="keyword">if</span> (x &lt; <span class="number">0</span>) <span class="comment">//判断x小于0的情况</span></div><div class="line">			y = <span class="number">1</span>;</div><div class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (x &lt; <span class="number">10</span>) <span class="comment">//else，即x不小于0了，因此只需额外加上x&lt;10的判断</span></div><div class="line">			y = <span class="number">2</span> * x; <span class="comment">//不能写2x，需要加上乘号*</span></div><div class="line">		<span class="keyword">else</span></div><div class="line">		&#123; <span class="comment">//如果一个判断中只需要写一个语句(以分号为结束标志)可以不加大括号(也可以加)，而如果要写多个语句则必须加</span></div><div class="line">			y = x * x; <span class="comment">//没有乘方运算，只能x * x</span></div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> y;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>如果你有兴趣尝试的话，你可以试一下10.1；准确值是102.01，但是输出的是102.01001，这就是浮点数有精度限制的体现。  </p>
+<h4 id="另一种分支：switch-…-case-…"><a href="#另一种分支：switch-…-case-…" class="headerlink" title="另一种分支：switch … case …"></a>另一种分支：switch … case …</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Scanner;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">	<span class="comment">/*</span></div><div class="line">	 * Example #3.3 switch case 基础版</div><div class="line">	 * 本例中对于输入一个x，输出f(x)的值</div><div class="line">	 * </div><div class="line">	 * f(x) = 1 (x = 1); 20 (x = 2, 3); 300 (x = 4, 5); 其他值输出"无意义"</div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">		<span class="keyword">int</span> input = scanner.nextInt(); <span class="comment">//读取用户输入的x值</span></div><div class="line">		F(input); <span class="comment">//计算函数值并输出</span></div><div class="line">		scanner.close();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">F</span><span class="params">(<span class="keyword">int</span> x)</span></span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">switch</span> (x) &#123;</div><div class="line">		<span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">			System.out.println(<span class="number">1</span>);</div><div class="line">			<span class="keyword">break</span>; <span class="comment">//表示case 1结束【否则程序会继续往下执行，同时输出1、20、300】</span></div><div class="line">		<span class="keyword">case</span> <span class="number">2</span>: <span class="comment">//case可以两个标签使用同一段代码，也可以case 2中执行一些语句后不break贯穿到case 3</span></div><div class="line">		<span class="keyword">case</span> <span class="number">3</span>:</div><div class="line">			System.out.println(<span class="number">20</span>);</div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		<span class="keyword">case</span> <span class="number">5</span>: <span class="comment">//case 标签的顺序不重要，不会影响程序执行。</span></div><div class="line">		<span class="keyword">case</span> <span class="number">4</span>:</div><div class="line">			System.out.println(<span class="number">300</span>);</div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		<span class="keyword">default</span>:</div><div class="line">			System.out.println(<span class="string">"无意义"</span>);</div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>备注：Java7中加入了switch的值是字符串的时候的情形，但是有诸多注意事项，在这里不作阐述，不推荐使用。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://strongrex2001.github.io/2017/07/21/java_t0_02/" data-id="cj5hsocjx0004ogiydh90wbk0" class="article-share-link">Поделиться</a>
+      <a data-url="http://strongrex2001.github.io/2017/07/21/java_t0_03/" data-id="cj5jbxh9x0007ooiycqhyes6b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -232,7 +255,7 @@
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/page/5/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/">__('next') &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/5/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/7/">__('next') &raquo;</a>
   </nav>
 </section>
         
@@ -248,7 +271,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Архив</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li></ul>
     </div>
@@ -258,9 +281,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Недавние записи</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/07/25/java_t0_08/">在实例中学习——从零开始学JAVA #8 标准库-容器</a>
+          </li>
         
           <li>
             <a href="/2017/07/23/java_t0_07/">在实例中学习——从零开始学JAVA #7 标准库-字符串</a>
@@ -278,10 +305,6 @@
             <a href="/2017/07/21/java_t0_04/">在实例中学习——从零开始学JAVA #4 循环和穷举</a>
           </li>
         
-          <li>
-            <a href="/2017/07/21/java_t0_03/">在实例中学习——从零开始学JAVA #3 基本数据类型和分支结构</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -295,7 +318,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 北海若<br>
-      Создано с помощью <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
